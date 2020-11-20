@@ -1,8 +1,13 @@
 from flask import Flask, render_template, redirect
 from flask_pymongo import PyMongo
 import scrape_mars
+from bs4 import BeautifulSoup as bs
+import pandas as pd
+import requests
+from splinter import Browser
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 import os
-import pandas as pd    
 app = Flask(__name__)
 mongo = PyMongo(app, uri="mongodb://localhost:27017/mars_app")
 

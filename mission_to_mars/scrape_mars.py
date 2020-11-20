@@ -1,11 +1,10 @@
-from splinter import Browser
 from bs4 import BeautifulSoup as bs
 import pandas as pd
-import datetime
 import requests
-import os
+from splinter import Browser
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+import os
 
 def init_browser():
     executable_path = {'executable_path': '/Users/adamkatz/.wdm/drivers/chromedriver/mac64/87.0.4280.20/chromedriver'}
@@ -33,7 +32,6 @@ def scrape():
     {"title": "Syrtis Major Hemisphere", "img_url": "https://astropedia.astrogeology.usgs.gov/download/Mars/Viking/syrtis_major_enhanced.tif"},
     ]
 
-    data={'news_title': news_title, 'news_p': news_p, 'featured_image_url': featured_image_url,
-    'Mars facts': df, 'Mars Pictues': hemisphere_image_urls}
+    data={'news_title': news_title, 'news_p': news_p, 'featured_image_url': featured_image_url}
     browser.quit()
     return data
