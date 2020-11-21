@@ -1,1 +1,2 @@
 # web-scraping-challenge
+This challenge had me scrape data from preexisting web pages and then displaying what I had scrapped using another html page. I had several difficulties at first. I discovered that despite using a macbook, I needed to use the windows method of data scraping. After that it was simply a matter of proper formating and keeping the names of my variables straight. Now the web page grabs a featured image and the most recent news story whenever the button at the top of the page is pressed and the facts and hemispheres of mars are displayed properly.
