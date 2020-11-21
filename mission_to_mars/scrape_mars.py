@@ -11,6 +11,7 @@ def init_browser():
     return Browser('chrome', **executable_path, headless=False)
 def scrape():
     browser = init_browser()
+    
     url = 'https://mars.nasa.gov/news/'
     browser.visit(url)
     html = browser.html 
@@ -32,6 +33,6 @@ def scrape():
     {"title": "Syrtis Major Hemisphere", "img_url": "https://astropedia.astrogeology.usgs.gov/download/Mars/Viking/syrtis_major_enhanced.tif"},
     ]
 
-    data={'news_title': news_title, 'news_p': news_p, 'featured_image_url': featured_image_url}
+    data = {"news_title": news_title, "news_p":news_p, "featured_image_url": featured_image_url}
     browser.quit()
     return data
